@@ -1,4 +1,4 @@
-# Evnorix — Enterprise Lending Technology & Engineering Platform
+# Evnorix — Enterprise Lending Technology Services Platform
 ### UI/UX Redesign & Frontend Engineering Submission
 
 > **Evaluation Submission for the Evnorix Website Redesign Challenge**  
@@ -8,12 +8,16 @@
 
 ## 1. Executive Summary & Challenge Alignment
 
-This repository contains the complete, production-grade redesign of the **Evnorix** public web platform, engineered from scratch to fulfill and exceed the criteria outlined in the **Evnorix Website Redesign Challenge (UI/UX Design + Frontend Thinking)**.
+This repository contains the complete, production-grade redesign of the **Evnorix** public web platform, engineered from scratch to strictly fulfill the criteria and constraints outlined in the **Evnorix Website Redesign Challenge (UI/UX Design + Frontend Thinking)**.
 
 ### Strategic Positioning:
-- **Service-First Technology Partner**: Evnorix is positioned not as an off-the-shelf shrink-wrapped SaaS tool, but as a **high-touch, mission-critical engineering partner** that builds, integrates, and operates custom digital lending infrastructure, automated underwriting engines, and committee-ready credit reporting systems.
-- **Enterprise Gravitas & Trust**: The interface immediately conveys institutional maturity, deterministic engineering rigor, and deep domain expertise in commercial banking, credit unions, and specialty finance.
-- **The 10-Second Test**: Within seconds of landing, institutional decision-makers comprehend Evnorix's value proposition: *eliminating spreadsheet friction, accelerating underwriting turnaround by 65%, and ensuring 100% audit-ready credit memo governance.*
+- **Service-Based Technology Company (Section 1 & 14)**: Evnorix is positioned as a **high-touch technology services partner** that builds, digitizes, integrates, and operates custom digital lending systems, collections workflows, and mission-critical data infrastructure—not as an off-the-shelf shrink-wrapped SaaS product.
+- **The 3 Mandatory Service Specializations (Section 1 & 3)**:
+  1. **Loan Origination System (LOS) Services** (`/los`)
+  2. **Collections Services** (`/collections`)
+  3. **Database Repositories & Data Mirroring** (`/data-infrastructure`)
+  4. **Complete Services Overview Hub** (`/services`)
+- **Strict Factual Rigor (Section 8 & 14)**: All statistics, data pipelines, and workflow mockups are explicitly presented and labeled as **illustrative prototype telemetry**, strictly avoiding fabricated customer claims or unverified certifications.
 
 ---
 
@@ -49,30 +53,29 @@ All animations and micro-interactions were designed under the principle of **Det
 - **Implementation**: Continuous parametric Bezier coordinate loop animating subtle radial emerald gradients behind frosted glass panels.
 - **Effect**: Creates a living, breathing background atmosphere that shifts softly without consuming heavy GPU cycles.
 
-### 2. Live Pipeline Queue & Interactive Inspection Matrix
-- **Implementation**: State-driven pipeline queue displaying real-time commercial loan files (`Ironclad Fabrications LLC`, `Coastal Logistics Group`, `Summit Health Expansion`).
-- **Micro-Interaction**: Clicking any item smoothly updates telemetry displays, showing credit decisioning flags, debt-service coverage ratios (DSCR), and document processing states.
+### 2. Live Operations Queue & Real-Time Inspection Matrix
+- **Implementation**: State-driven pipeline queue displaying real-time commercial loan files across all 3 services:
+  - `Ironclad Fabrications LLC` &bull; **LOS Origination** ($285,000 | Underwriting)
+  - `Coastal Logistics Group` &bull; **Collections Recovery** ($92,400 | Payment Plan)
+  - `Summit Ridge Data Vault` &bull; **Data Mirror Node** (12ms Sync | Active Mirror)
+- **Micro-Interaction**: Clicking any item smoothly updates telemetry displays.
 
-### 3. Animated Odometer Counters (`OdometerNumber`)
+### 3. Velocity-Based Odometer Counters (`CountUp`)
 - **Implementation**: Framer Motion `useSpring` and `useTransform` velocity-based odometer numbers that dynamically trigger as the user scrolls into viewport view.
 - **Metrics Illustrated**:
-  - `65%` Faster Time-to-Close
+  - `65%` Accelerated Cycle Times
   - `99.9%` Operational Precision
   - `4.8x` Throughput Growth
+  - *Clearly footnoted with illustrative simulation disclaimers per Section 8 of the brief.*
 
-### 4. Interactive Credit Memo Packet Generator (`CreditMemoPage.jsx`)
-- **Implementation**: Live interactive risk & committee reporting workbench. Users can switch between **Executive Summary**, **Financial Spreads & Ratios**, **Risk Matrix**, and **Committee Recommendation**.
-- **Tactile Feedback**: Generates real-time calculation pills, debt covenant checks, and automated KYC verification badges.
-
-### 5. Monumental SVG Typography with Right-Side Spread Shadows (`ContactPage.jsx`)
+### 4. Monumental SVG Typography with Right-Side Spread Shadows (`ContactPage.jsx`)
 - **Implementation**: Custom vector SVG rendering `CONTACT` with:
   - **Dark Green Perimeter Stroke**: `#1E825B` $\rightarrow$ `#0E704C` $\rightarrow$ `#053321` linear gradient stroke.
   - **Directional Right-Side Deep Spread Shadow**: Dual-stage Gaussian drop shadows (`dx="22" dy="12" stdDeviation="18"` and `dx="10" dy="6" stdDeviation="8"`) casting natural depth to the right.
   - **No Neon Glow**: Completely free of artificial radial glow, producing a crisp, architectural sculptural finish.
 
-### 6. Leader Blueprint Transformation Cards
-- **Implementation**: Fluid flip and expansion cards in the Testimonial showcase.
-- **Design System Integration**: Strict adherence to the `font-body` and `font-display` typography tokens, vector `CheckIcon` indicators, and structured metric badges (`-65% Time to Close`, `45-Min Underwriting`).
+### 5. Leader Blueprint Transformation Cards
+- **Implementation**: Fluid flip and expansion cards in the Testimonial showcase with single-tap toggle on mobile and hover on desktop.
 
 ---
 
@@ -82,15 +85,16 @@ All animations and micro-interactions were designed under the principle of **Det
 src/
 ├── components/
 │   ├── Navbar.jsx          # Adaptive high-contrast floating navigation
-│   ├── Footer.jsx          # Comprehensive footer with direct product routing
+│   ├── Footer.jsx          # Comprehensive footer with direct 3-service routing
 │   ├── SectionReveal.jsx   # Staggered entrance animations
 │   ├── CTABanner.jsx       # Universal conversion handoff banner
 │   └── Icons.jsx           # Clean lightweight vector icon suite
 ├── pages/
 │   ├── HomePage.jsx        # High-impact value proposition & interactive bento
-│   ├── ProductsPage.jsx    # Complete product ecosystem & capabilities overview
+│   ├── ProductsPage.jsx    # Services Suite Hub (LOS, Collections, Data Mirroring)
 │   ├── LOSPage.jsx         # 6-stage loan origination workflow & technical architecture
-│   ├── CreditMemoPage.jsx  # Automated credit memo generation & interactive previewer
+│   ├── CollectionsPage.jsx # Delinquency bucket workflows & field recovery tracking
+│   ├── DataInfrastructurePage.jsx # Data replication, CDC pipelines & disaster recovery
 │   ├── AboutPage.jsx       # Bento showcase, team culture photography & core values
 │   └── ContactPage.jsx     # Sculptural typography hero & technical blueprint form
 └── index.css               # Global design tokens, typography & custom utilities
@@ -100,32 +104,34 @@ src/
 
 #### 1. Home Page (`/`)
 - **Hero Banner**: Clear, jargon-free statement: *"Technology services for teams that can't afford disconnected systems."*
-- **Interactive Bento Grid**: Live underwriting telemetry, active pipeline queue inspection, and data throughput monitors.
-- **Value Metric Pillars**: Animated odometer statistics demonstrating operational cycle time reduction.
+- **Interactive Bento Grid**: Live underwriting telemetry, active 3-service pipeline queue inspection, and data throughput monitors.
+- **Value Metric Pillars**: Animated odometer statistics demonstrating operational cycle time reduction with prototype benchmark disclosures.
 - **Architecture Showcase**: Step-by-step visual workflow illustrating automated intake, policy rules, KYC verification, and core banking handoff.
 - **Social Proof**: Leadership testimonials styled as technical transformation blueprints.
 
-#### 2. Loan Origination System (LOS) Page (`/los`)
+#### 2. Loan Origination System (LOS) Services (`/los`)
 - **6-Stage Interactive Pipeline**: Visualizes the complete loan lifecycle from borrower intake, document OCR extraction, KYC verification, rule-based underwriting, committee approval, to core disbursement.
 - **Technical Architecture Diagram**: Demonstrates API connectors, legacy core adapters, and automated audit logging.
-- **FAQ & Enterprise FAQs**: Addresses compliance, deployment speed, and data security.
+- **FAQ & Inquiries**: Answers enterprise discovery, compliance, and integration questions.
 
-#### 3. Credit Memo & Committee Reporting Page (`/credit-memo`)
-- **Interactive Memo Previewer**: Allows decision-makers to test live credit memo generation with real financial metrics.
-- **Audit Governance**: Explains immutable decision trails, policy exception logging, and automatic narrative generation.
+#### 3. Collections Services (`/collections`)
+- **Delinquency Escalation Workflows**: Automated follow-up triggers and communication cadences by bucket (1-30 DPD, 31-60 DPD, 61+ DPD).
+- **Field Activity Tracking & Agent Queues**: Centralized promise-to-pay logging and geo-verified field updates.
+- **Self-Service Borrower Payment Links**: Instant SMS/email payment generation with real-time ledger settlement.
 
-#### 4. About Us Page (`/about`)
-- **Hero & Mission**: *"Unveiling Our Vision and Mission"* with clean, geometric badge styling.
-- **Signature 4-Column Bento Grid**:
-  - **Team Culture & Collaboration**: High-resolution documentary-style fintech engineering photography.
-  - **Dedicated Social Channels**: Interactive vector buttons for **Twitter / X**, **LinkedIn**, **GitHub**, and **YouTube**.
-  - **Key Metrics**: `50+` Team Members (lime highlight card with coordinate mesh), `100%` Operational Dedication, and `2` Global Engineering Hubs.
-- **Editorial Values & Mission**: Two-column architectural layout detailing engineering rigor and deterministic platform execution.
+#### 4. Database Repositories & Data Mirroring (`/data-infrastructure`)
+- **Real-Time CDC Replication**: Sub-second transactional mirroring between core ledgers and analytical replicas.
+- **Controlled Multi-Node Sync & Disaster Recovery**: Hot-standby replication with automated failover and split-brain conflict resolution.
+- **End-to-End Compliance Encryption**: TLS 1.3 in-transit and AES-256 at-rest encryption protocols.
 
-#### 5. Contact & Institutional Engagement (`/contact`)
+#### 5. About Us Page (`/about`)
+- **Hero & Mission**: *"Unveiling Our Vision and Mission"* with clean geometric badge styling.
+- **Signature 4-Column Bento Grid**: Custom team culture photography, interactive social channels (Twitter/X, LinkedIn, GitHub, YouTube), `50+` team highlight card, and 2-column editorial mission/values layout.
+
+#### 6. Contact & Institutional Engagement (`/contact`)
 - **Monumental Background Typography**: Giant responsive `CONTACT` lettering with dark green gradient borders and right-side shadow.
 - **High-Contrast Navbar Theme**: Automatically renders a luminous porcelain glass bar to ensure stark contrast and effortless navigation.
-- **Technical Blueprint Form**: Minimalist underline inputs with interactive service pills (`LOS Modernization`, `Credit Memo Automation`, `Custom Integration`), responsive message inputs, and simulated direct handoff states.
+- **Technical Blueprint Form**: Minimalist underline inputs with interactive service selector pills (`LOS Modernization`, `Collections Workflows`, `Data Mirroring`), responsive message inputs, and simulated direct handoff states.
 
 ---
 
@@ -135,8 +141,8 @@ src/
 |:---|:---:|:---|
 | **UI Visual Quality** | **20%** | Bespoke Dark Forest & Luminous Mint palette; refined typography pairings (`font-display` serif + `font-body` sans-serif); zero generic colors or default UI templates. |
 | **UX & Information Architecture** | **20%** | Frictionless 10-second value discovery; clear hierarchical navigation; zero dead ends; seamless transition from interest $\rightarrow$ deep technical detail $\rightarrow$ conversion. |
-| **Company / Service Communication** | **15%** | Positions Evnorix squarely as a high-touch technology services firm specialized in commercial lending workflows, underwriting, and data infrastructure. |
-| **Originality & Design Thinking** | **15%** | Interactive live pipeline queue, interactive credit memo generator, sculptural SVG typography, and reference-inspired bento grid layouts. |
+| **Company / Service Communication** | **15%** | Accurately positions Evnorix as a technology services firm specialized in all 3 mandatory areas: LOS, Collections, and Database Repositories & Data Mirroring. |
+| **Originality & Design Thinking** | **15%** | Interactive live pipeline queue, multi-node replication telemetry, sculptural SVG typography, and reference-inspired bento grid layouts. |
 | **Responsive Design** | **10%** | Pixel-perfect layouts across mobile (375px+), tablet (768px+), desktop (1024px+), and ultrawide (1440px+) displays with zero horizontal scroll overflow. |
 | **Trust & Enterprise Credibility** | **10%** | Transparent engineering methodology, SOC 2 / ISO 27001 readiness framing, documented security practices, and factual, non-exaggerated claims. |
 | **Prototype / Implementation Quality** | **10%** | Clean, modular React component architecture; zero unused dependencies; rapid Vite HMR performance; semantic HTML5; accessible WCAG AA compliance. |
@@ -195,8 +201,8 @@ npm run preview
 
 ## 8. Summary of Candidate Design Judgments
 
-1. **Avoided Generic SaaS Tropes**: Rejected pastel purple gradients, illustrated cartoons, and generic stock handshakes in favor of dark architectural fintech surfaces and technical blueprints.
-2. **Focused on Concrete Workflows**: Every page demonstrates exact domain functionality: financial spreads, KYC verification flows, debt covenant rules, and committee reporting.
-3. **Engineered for Scalability**: The component architecture allows new services (e.g. Collections Servicing, Syndicated Facility Engines) to be added seamlessly using existing layout primitives.
+1. **Service-First Architecture**: Strictly communicates Evnorix's role as a hands-on technology services partner across lending, collections, and data infrastructure.
+2. **Deterministic Domain Workflows**: Every service page demonstrates exact operational functionality: delinquency escalations, change-data-capture replication, and automated intake parsing.
+3. **Engineered for Scalability**: The component architecture allows future services to be added seamlessly using existing layout primitives.
 
 *Evnorix Redesign — Built for Modern Institutional Lending Teams.*

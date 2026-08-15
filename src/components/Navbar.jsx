@@ -1,19 +1,25 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { SparklesIcon, BarChartIcon } from './Icons';
+import { SparklesIcon, BarChartIcon, ShieldCheckIcon } from './Icons';
 
-const productItems = [
+const serviceItems = [
   {
-    title: 'LOS',
-    subtitle: 'Loan Origination System',
+    title: 'LOS Services',
+    subtitle: 'Loan Origination Workflows',
     to: '/los',
     icon: SparklesIcon,
   },
   {
-    title: 'Credit Memo',
-    subtitle: 'Credit Memo & Reporting',
-    to: '/credit-memo',
+    title: 'Collections Services',
+    subtitle: 'Recovery & Field Automation',
+    to: '/collections',
+    icon: ShieldCheckIcon,
+  },
+  {
+    title: 'Database Repositories',
+    subtitle: 'Data Mirroring & Sync',
+    to: '/data-infrastructure',
     icon: BarChartIcon,
   },
 ];
@@ -91,7 +97,7 @@ export default function Navbar() {
               )}
             </Link>
 
-            {/* Products Dropdown */}
+            {/* Services Dropdown */}
             <div
               ref={dropdownRef}
               className="relative"
@@ -108,7 +114,7 @@ export default function Navbar() {
                 }`}
                 aria-expanded={productsOpen}
               >
-                <span>Products</span>
+                <span>Services</span>
                 <svg
                   className={`w-3.5 h-3.5 transition-transform duration-200 ${
                     productsOpen ? 'rotate-180 text-[#0E704C]' : isContact ? 'text-[#0A1C16]/50' : 'text-white/50'
@@ -134,7 +140,7 @@ export default function Navbar() {
                     style={{ backgroundColor: '#0A1C16' }}
                   >
                     <div className="space-y-1">
-                      {productItems.map((item) => {
+                      {serviceItems.map((item) => {
                         const IconComp = item.icon;
                         return (
                           <Link
@@ -160,10 +166,10 @@ export default function Navbar() {
 
                     <div className="mt-2 pt-2.5 border-t border-[#193E30] px-3 pb-1">
                       <Link
-                        to="/products"
+                        to="/services"
                         className="inline-flex items-center gap-1.5 text-[#52C480] hover:text-[#86EFAC] text-xs font-semibold transition-colors group"
                       >
-                        View all products
+                        View all services
                         <svg
                           className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform duration-150"
                           fill="none"
@@ -171,7 +177,6 @@ export default function Navbar() {
                           stroke="currentColor"
                           strokeWidth={2}
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
                       </Link>
                     </div>
@@ -263,26 +268,26 @@ export default function Navbar() {
                   Home
                 </Link>
 
-                {/* Mobile Products Section (Directly Clickable & Always Visible) */}
+                {/* Mobile Services Section (Directly Clickable & Always Visible) */}
                 <div className="rounded-xl bg-black/25 p-3 border border-white/10 space-y-2">
                   <div className="flex items-center justify-between px-1 pb-1 border-b border-white/10">
                     <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#A7F3D0] flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#52C480] animate-pulse" />
-                      Products
+                      Services
                     </span>
                     <Link
-                      to="/products"
+                      to="/services"
                       onClick={() => {
                         setMobileOpen(false);
                       }}
                       className="text-[11px] font-semibold text-[#52C480] hover:text-[#86EFAC] transition-colors"
                     >
-                      View All Suite →
+                      View All Services →
                     </Link>
                   </div>
 
                   <div className="space-y-1.5 pt-1">
-                    {productItems.map((item) => (
+                    {serviceItems.map((item) => (
                       <Link
                         key={item.title}
                         to={item.to}

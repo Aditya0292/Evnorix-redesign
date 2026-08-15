@@ -2,18 +2,19 @@ import { Link } from 'react-router-dom';
 
 const footerSections = [
   {
-    title: 'Products',
+    title: 'Services',
     links: [
-      { label: 'Loan Origination System (LOS)', to: '/los' },
-      { label: 'Credit Memo & Committee Reporting', to: '/credit-memo' },
-      { label: 'All Products Overview', to: '/products' },
+      { label: 'LOS Services', to: '/los' },
+      { label: 'Collections Services', to: '/collections' },
+      { label: 'Database Repositories & Data Mirroring', to: '/data-infrastructure' },
+      { label: 'All Services Overview', to: '/services' },
     ],
   },
   {
     title: 'Company',
     links: [
       { label: 'About Us', to: '/about' },
-      { label: 'Contact & Demo', to: '/contact' },
+      { label: 'Contact & Inquiries', to: '/contact' },
     ],
   },
 ];

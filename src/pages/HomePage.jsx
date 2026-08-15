@@ -207,10 +207,10 @@ export default function HomePage() {
                   </div>
                 </div>
                 <p className="text-ink font-semibold text-sm">
-                  All essential lending &amp; credit memo workflows in one unified platform.
+                  Technology services for lending, collections, and data teams.
                 </p>
                 <p className="text-muted text-xs mt-1">
-                  LOS and Automated Credit Memo Generation built for institutional scale.
+                  LOS, Collections, and Real-time Data Repositories built for scale.
                 </p>
               </div>
             </SectionReveal>
@@ -330,8 +330,8 @@ export default function HomePage() {
                     <div className="space-y-2.5">
                       {[
                         { title: 'Ironclad Fabrications LLC', type: 'LOS Origination', val: '$285,000', step: 'Underwriting' },
-                        { title: 'Coastal Logistics Group', type: 'Credit Memo Packet', val: '$92,400', step: 'Committee Ready' },
-                        { title: 'Summit Health Expansion', type: 'Instant Decisioning', val: '$450,000', step: 'Disbursal Ready' },
+                        { title: 'Coastal Logistics Group', type: 'Collections Recovery', val: '$92,400', step: 'Payment Plan' },
+                        { title: 'Summit Ridge Data Vault', type: 'Data Mirror Node', val: '12ms Sync', step: 'Active Mirror' },
                       ].map((item, idx) => {
                         const isSelected = activePipelineItem === idx;
                         return (
@@ -417,11 +417,11 @@ export default function HomePage() {
                   </span>
                 </SectionReveal>
                 <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-ink max-w-2xl leading-tight">
-                  Consolidate all of your lending and credit operations in one place
+                  Consolidate all of your lending, collections, and data workflows
                 </h2>
               </div>
               <p className="text-muted text-base max-w-md leading-relaxed">
-                From borrower intake and credit decisioning to committee-ready memo generation, get a connected solution engineered for institutional precision.
+                From borrower intake and automated underwriting to field recovery and real-time data replication, get a connected solution engineered for institutional precision.
               </p>
             </div>
           </SectionReveal>
@@ -434,8 +434,8 @@ export default function HomePage() {
                 target: 65,
                 suffix: '%',
                 decimals: 0,
-                title: 'Faster Time-to-Close',
-                desc: 'Cut cycle time with automated underwriting rules, real-time intake verification, and seamless handoffs.',
+                title: 'Accelerated Cycle Times',
+                desc: 'Target cycle time reduction achieved through automated KYC rules, real-time intake parsing, and direct core banking handoffs.',
               },
               {
                 icon: ShieldCheckIcon,
@@ -443,7 +443,7 @@ export default function HomePage() {
                 suffix: '%',
                 decimals: 1,
                 title: 'Operational Precision',
-                desc: 'Eliminate duplicate data entry, missed deadlines, and spreadsheet errors across all departments.',
+                desc: 'Eliminate duplicate data entry, missed compliance deadlines, and spreadsheet errors across lending and collections.',
               },
               {
                 icon: LayersIcon,
@@ -451,7 +451,7 @@ export default function HomePage() {
                 suffix: 'x',
                 decimals: 1,
                 title: 'Throughput Growth',
-                desc: 'Scale loan origination and credit committee throughput effortlessly without adding manual headcount.',
+                desc: 'Scale commercial loan origination and portfolio management volume effortlessly without expanding manual headcount.',
               },
             ].map((metric, i) => {
               const IconComp = metric.icon;
@@ -480,6 +480,13 @@ export default function HomePage() {
                 </SectionReveal>
               );
             })}
+          </div>
+
+          {/* Factual Prototype Disclaimer to Comply with Section 8 of Brief */}
+          <div className="mt-8 text-center">
+            <p className="text-[11px] text-muted-light font-mono">
+              *Illustrative operational capabilities and workflow benchmarks simulated for prototype evaluation.
+            </p>
           </div>
         </div>
       </section>

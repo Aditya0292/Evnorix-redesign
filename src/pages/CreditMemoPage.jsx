@@ -496,38 +496,7 @@ export default function CreditMemoPage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
-          4. PAIRS WITH LOS
-         ───────────────────────────────────────────────────────────── */}
-      <section className="py-16 px-6 lg:px-8 bg-linen">
-        <div className="max-w-7xl mx-auto">
-          <SectionReveal>
-            <div className="bg-card border border-hairline rounded-lg p-8 sm:p-10 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-              <div className="max-w-2xl">
-                <span className="text-[11px] font-bold uppercase tracking-widest text-[#0E704C] block mb-1">
-                  Pairs with
-                </span>
-                <h3 className="font-display font-bold text-2xl text-ink mb-2">
-                  Loan Origination System (LOS)
-                </h3>
-                <p className="text-muted text-sm leading-relaxed">
-                  Credit Memo is engineered to work directly with data captured during underwriting in LOS, eliminating separate spreadsheets, fragmented emails, or disparate tools to maintain.
-                </p>
-              </div>
-
-              <Link
-                to="/los"
-                className="flex-shrink-0 inline-flex items-center gap-1.5 text-[#0E704C] hover:text-[#0A563A] text-xs font-bold uppercase tracking-wider transition-colors group"
-              >
-                <span>Explore LOS Platform</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </Link>
-            </div>
-          </SectionReveal>
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────────────────────
-          5. CTA BANNER
+          4. CTA BANNER
          ───────────────────────────────────────────────────────────── */}
       <CTABanner />
     </>

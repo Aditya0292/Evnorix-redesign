@@ -427,38 +427,7 @@ export default function LOSPage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
-          4. PAIRS WITH SECTION (Credit Memo)
-         ───────────────────────────────────────────────────────────── */}
-      <section className="py-16 px-6 lg:px-8 bg-linen">
-        <div className="max-w-7xl mx-auto">
-          <SectionReveal>
-            <div className="bg-card border border-hairline rounded-lg p-8 sm:p-10 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-              <div className="max-w-2xl">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#0E704C] block mb-1">
-                  Pairs with
-                </span>
-                <h3 className="font-display font-bold text-2xl text-ink mb-2">
-                  Credit Memo
-                </h3>
-                <p className="text-muted text-sm leading-relaxed">
-                  Once underwriting wraps up in LOS, Credit Memo turns that data into a committee-ready memo automatically, with zero manual spreadsheet drafting or re-keying.
-                </p>
-              </div>
-
-              <Link
-                to="/credit-memo"
-                className="flex-shrink-0 inline-flex items-center gap-1.5 text-[#0E704C] hover:text-[#0A563A] text-xs font-bold uppercase tracking-wider transition-colors group"
-              >
-                <span>Explore Credit Memo</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </Link>
-            </div>
-          </SectionReveal>
-        </div>
-      </section>
-
-      {/* ─────────────────────────────────────────────────────────────
-          5. CTA BANNER
+          4. CTA BANNER
          ───────────────────────────────────────────────────────────── */}
       <CTABanner />
     </>

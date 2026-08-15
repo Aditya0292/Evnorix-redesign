@@ -128,7 +128,6 @@ export default function ContactPage() {
           <SectionReveal delay={0.1}>
             <div className="relative -mt-14 sm:-mt-24 lg:-mt-36 z-20 max-w-5xl mx-auto rounded-2xl bg-gradient-to-b from-[#0E704C] via-[#0B5A3C] to-[#073D29] border border-[#52C480]/40 shadow-[0_25px_90px_rgba(4,13,9,0.95),0_0_60px_rgba(14,112,76,0.35)] p-6 sm:p-10 lg:p-14 text-white overflow-hidden">
               
-              {/* Technical Blueprint Coordinate Grid Overlay */}
               <div
                 className="absolute inset-0 opacity-15 pointer-events-none"
                 style={{
@@ -140,14 +139,12 @@ export default function ContactPage() {
                 }}
               />
 
-              {/* Form Card Top Header */}
               <div className="relative z-10 flex items-center justify-between mb-8 pb-4 border-b border-[#166B4A]">
-                <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#A7F3D0]">
+                <span className="text-xs font-body font-bold uppercase tracking-widest text-[#A7F3D0]">
                   REACH US
                 </span>
               </div>
 
-              {/* Form State Container */}
               <AnimatePresence mode="wait">
                 {formState === 'success' ? (
                   <motion.div
@@ -158,31 +155,20 @@ export default function ContactPage() {
                     className="relative z-10 flex flex-col items-center justify-center py-12 text-center"
                   >
                     <div className="w-16 h-16 rounded-full bg-white text-[#0E704C] flex items-center justify-center shadow-xl mb-6">
-                      <CheckIcon className="w-8 h-8 text-[#0E704C]" />
+                      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
                     </div>
-                    <h2 className="font-display font-bold text-3xl text-white mb-3">
-                      Message Dispatched
-                    </h2>
-                    <p className="text-emerald-100/90 text-sm max-w-md leading-relaxed">
-                      Thank you. An Evnorix institutional platform engineer will reach out to your team within one business day.
+                    <h3 className="font-display font-bold text-2xl text-white mb-2">
+                      Inquiry Dispatched
+                    </h3>
+                    <p className="text-sm text-emerald-100/80 max-w-sm mb-8 leading-relaxed font-body">
+                      Thank you. An Evnorix solutions engineer will review your institutional requirements and reach out within 1 business day.
                     </p>
                     <button
                       type="button"
-                      onClick={() => {
-                        setFormState('default');
-                        setFormData({
-                          firstName: '',
-                          lastName: '',
-                          email: '',
-                          company: '',
-                          product: 'los',
-                          message: '',
-                          consent: true,
-                        });
-                        setTouched({});
-                        setErrors({});
-                      }}
-                      className="mt-8 px-6 py-2.5 rounded-full bg-white text-[#0E704C] hover:bg-[#E6F7F0] text-xs font-bold uppercase tracking-wider transition-all shadow-md"
+                      onClick={handleReset}
+                      className="px-6 py-2.5 rounded-full bg-white text-[#0E704C] text-xs font-bold font-body uppercase tracking-wider shadow-lg hover:bg-emerald-50 transition-all duration-200"
                     >
                       Send Another Request
                     </button>
@@ -191,92 +177,97 @@ export default function ContactPage() {
                   <motion.form
                     key="form"
                     ref={formRef}
-                    onSubmit={handleSubmit}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
+                    onSubmit={handleSubmit}
                     className="relative z-10"
                     noValidate
                   >
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-14">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
                       
-                      {/* Left Column: Underline Inputs */}
                       <div className="space-y-6">
-                        {/* First Name */}
                         <div>
                           <input
+                            id="firstName"
                             type="text"
-                            placeholder="First Name"
+                            placeholder="First Name *"
                             value={formData.firstName}
                             onChange={(e) => handleChange('firstName', e.target.value)}
                             onBlur={() => handleBlur('firstName')}
-                            className="w-full bg-transparent border-b border-white/30 focus:border-white text-white placeholder-white/60 text-sm sm:text-base py-3 px-1 transition-colors outline-none"
+                            className={`w-full bg-transparent border-b text-white placeholder-white/60 text-sm sm:text-base py-3 px-1 transition-colors outline-none font-body ${
+                              errors.firstName ? 'border-red-400' : 'border-white/30 focus:border-white'
+                            }`}
                           />
                           {errors.firstName && (
-                            <p className="text-rose-300 text-xs mt-1.5">{errors.firstName}</p>
+                            <p className="text-[11px] text-red-300 mt-1 font-medium font-body">{errors.firstName}</p>
                           )}
                         </div>
 
-                        {/* Last Name */}
                         <div>
                           <input
+                            id="lastName"
                             type="text"
-                            placeholder="Last Name"
+                            placeholder="Last Name *"
                             value={formData.lastName}
                             onChange={(e) => handleChange('lastName', e.target.value)}
                             onBlur={() => handleBlur('lastName')}
-                            className="w-full bg-transparent border-b border-white/30 focus:border-white text-white placeholder-white/60 text-sm sm:text-base py-3 px-1 transition-colors outline-none"
+                            className={`w-full bg-transparent border-b text-white placeholder-white/60 text-sm sm:text-base py-3 px-1 transition-colors outline-none font-body ${
+                              errors.lastName ? 'border-red-400' : 'border-white/30 focus:border-white'
+                            }`}
                           />
                           {errors.lastName && (
-                            <p className="text-rose-300 text-xs mt-1.5">{errors.lastName}</p>
+                            <p className="text-[11px] text-red-300 mt-1 font-medium font-body">{errors.lastName}</p>
                           )}
                         </div>
 
-                        {/* Email */}
                         <div>
                           <input
+                            id="email"
                             type="email"
-                            placeholder="Email"
+                            placeholder="Work Email *"
                             value={formData.email}
                             onChange={(e) => handleChange('email', e.target.value)}
                             onBlur={() => handleBlur('email')}
-                            className="w-full bg-transparent border-b border-white/30 focus:border-white text-white placeholder-white/60 text-sm sm:text-base py-3 px-1 transition-colors outline-none"
+                            className={`w-full bg-transparent border-b text-white placeholder-white/60 text-sm sm:text-base py-3 px-1 transition-colors outline-none font-body ${
+                              errors.email ? 'border-red-400' : 'border-white/30 focus:border-white'
+                            }`}
                           />
                           {errors.email && (
-                            <p className="text-rose-300 text-xs mt-1.5">{errors.email}</p>
+                            <p className="text-[11px] text-red-300 mt-1 font-medium font-body">{errors.email}</p>
                           )}
                         </div>
 
-                        {/* Company */}
                         <div>
                           <input
+                            id="company"
                             type="text"
-                            placeholder="Company / Lending Institution"
+                            placeholder="Lending Institution / Company"
                             value={formData.company}
                             onChange={(e) => handleChange('company', e.target.value)}
-                            className="w-full bg-transparent border-b border-white/30 focus:border-white text-white placeholder-white/60 text-sm sm:text-base py-3 px-1 transition-colors outline-none"
+                            className="w-full bg-transparent border-b border-white/30 focus:border-white text-white placeholder-white/60 text-sm sm:text-base py-3 px-1 transition-colors outline-none font-body"
                           />
                         </div>
 
-                        {/* Product Area Interest Pill Selectors */}
                         <div className="pt-2">
-                          <label className="block text-xs font-mono uppercase tracking-wider text-[#A7F3D0] mb-2">
-                            Product Interest
+                          <label className="block text-xs font-body uppercase tracking-wider text-[#A7F3D0] mb-2 font-semibold">
+                            Service Area of Interest
                           </label>
                           <div className="flex flex-wrap gap-2">
                             {[
-                              { id: 'los', label: 'LOS Engine' },
-                              { id: 'credit-memo', label: 'Credit Memo' },
-                              { id: 'both', label: 'Complete Suite' },
+                              { id: 'los', label: 'LOS Services' },
+                              { id: 'collections', label: 'Collections' },
+                              { id: 'data', label: 'Database & Mirroring' },
+                              { id: 'all', label: 'Complete Suite' },
                             ].map((prod) => (
                               <button
                                 key={prod.id}
                                 type="button"
                                 onClick={() => handleChange('product', prod.id)}
-                                className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
+                                className={`px-3 py-1.5 rounded-md text-xs font-body font-medium transition-all duration-150 ${
                                   formData.product === prod.id
-                                    ? 'bg-white text-[#0E704C] shadow-sm'
-                                    : 'bg-[#0A4832] text-white/80 hover:bg-[#0E543A]'
+                                    ? 'bg-white text-[#0E704C] shadow-md font-bold'
+                                    : 'bg-[#06422C]/80 text-white/80 hover:bg-[#06422C] border border-[#166B4A]'
                                 }`}
                               >
                                 {prod.label}
@@ -285,7 +276,6 @@ export default function ContactPage() {
                           </div>
                         </div>
 
-                        {/* Consent Checkbox */}
                         <div className="pt-3">
                           <label className="flex items-start gap-3 cursor-pointer group">
                             <input

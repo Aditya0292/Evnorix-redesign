@@ -484,7 +484,7 @@ export default function HomePage() {
 
           {/* Factual Prototype Disclaimer to Comply with Section 8 of Brief */}
           <div className="mt-8 text-center">
-            <p className="text-[11px] text-muted-light font-mono">
+            <p className="text-[11px] text-muted-light font-body">
               *Illustrative operational capabilities and workflow benchmarks simulated for prototype evaluation.
             </p>
           </div>
@@ -697,7 +697,7 @@ export default function HomePage() {
           {/* Main Centered Reference Header */}
           <SectionReveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1 text-xs font-mono font-semibold uppercase tracking-widest text-[#52C480] bg-[#0E2E20] border border-[#164D36] rounded-md mb-4 shadow-sm">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1 text-xs font-body font-semibold uppercase tracking-widest text-[#52C480] bg-[#0E2E20] border border-[#164D36] rounded-md mb-4 shadow-sm">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#52C480] animate-pulse" />
                 Trusted By Financial Leaders
               </span>
@@ -859,7 +859,7 @@ export default function HomePage() {
                               <p className="text-xs text-white/70 font-medium mt-0.5">
                                 {t.role}
                               </p>
-                              <p className="text-[11px] text-[#52C480] font-mono mt-0.5">
+                              <p className="text-[11px] text-[#52C480] font-body font-medium mt-0.5">
                                 {t.company}
                               </p>
 

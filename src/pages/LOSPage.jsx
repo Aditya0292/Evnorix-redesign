@@ -289,7 +289,7 @@ export default function LOSPage() {
                                 <p className={`text-xs font-semibold ${isCurrent ? 'text-[#0E704C]' : 'text-ink'}`}>
                                   {step.label}
                                 </p>
-                                <span className="text-[10px] text-muted font-mono">{step.time}</span>
+                                <span className="text-[10px] text-muted font-body font-medium">{step.time}</span>
                               </div>
                               <p className="text-muted text-[11px] mt-0.5 leading-snug">{step.meta}</p>
                             </div>
@@ -301,12 +301,12 @@ export default function LOSPage() {
 
                   {/* Progress Indicator Bar */}
                   <div className="relative z-10 pt-2 border-t border-hairline/80">
-                    <div className="flex items-center justify-between text-xs text-muted font-medium mb-1.5">
+                    <div className="flex items-center justify-between text-xs text-muted font-medium mb-1.5 font-body">
                       <span className="flex items-center gap-1.5">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#0E704C] animate-ping" />
                         Pipeline Progress
                       </span>
-                      <span className="text-[#0E704C] font-bold font-mono">
+                      <span className="text-[#0E704C] font-bold font-body">
                         {progressPercent}% {progressPercent === 100 ? 'Verified' : 'Processing'}
                       </span>
                     </div>
@@ -409,7 +409,7 @@ export default function LOSPage() {
               <SectionReveal key={b.title} delay={i * 0.08}>
                 <div className="p-6 rounded-lg bg-[#FAF9F6] border border-hairline hover:border-[#A7F3D0] transition-all duration-200 h-full flex flex-col justify-between">
                   <div>
-                    <span className="text-xs font-mono font-bold text-[#0E704C] mb-3 block">
+                    <span className="text-xs font-body font-bold text-[#0E704C] mb-3 block">
                       {b.num}
                     </span>
                     <h3 className="font-display font-bold text-lg text-ink mb-2 leading-snug">

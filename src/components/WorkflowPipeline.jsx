@@ -46,19 +46,19 @@ export default function WorkflowPipeline({
       {/* ─── Header ─── */}
       <div className="relative z-10 flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-6 border-b border-[#193E30]/80">
         <div>
-          <span className="inline-flex items-center gap-2 px-3 py-1 text-[11px] font-mono font-semibold uppercase tracking-widest text-[#52C480] bg-[#122E25] border border-[#194D3B] rounded-md mb-3">
+          <span className="inline-flex items-center gap-2 px-3 py-1 text-[11px] font-body font-semibold uppercase tracking-widest text-[#52C480] bg-[#122E25] border border-[#194D3B] rounded-md mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-[#52C480] animate-pulse" />
             {badge}
           </span>
           <h3 className="font-display font-bold text-2xl sm:text-3xl text-white tracking-tight">
             {title}
           </h3>
-          <p className="text-[#94A3B8] text-xs sm:text-sm mt-1.5 max-w-xl leading-relaxed">
+          <p className="text-[#94A3B8] text-xs sm:text-sm mt-1.5 max-w-xl leading-relaxed font-body">
             {subtitle}
           </p>
         </div>
 
-        <div className="flex items-center gap-3 text-xs text-[#94A3B8] font-mono">
+        <div className="flex items-center gap-3 text-xs text-[#94A3B8] font-body font-semibold">
           <span className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-[#52C480] animate-ping" />
             LIVE SIGNAL
@@ -119,7 +119,7 @@ export default function WorkflowPipeline({
                   <div className="flex items-start gap-3.5">
                     {/* Node Number/Indicator */}
                     <div
-                      className={`w-7 h-7 rounded-md flex items-center justify-center text-xs font-mono font-bold flex-shrink-0 transition-colors ${
+                      className={`w-7 h-7 rounded-md flex items-center justify-center text-xs font-body font-bold flex-shrink-0 transition-colors ${
                         isActive
                           ? 'bg-[#52C480] text-[#0A1C16] shadow-sm'
                           : isPassed
@@ -132,21 +132,21 @@ export default function WorkflowPipeline({
 
                     <div>
                       <div className="flex items-center gap-2 mb-0.5">
-                        <span className="text-[10px] font-mono uppercase tracking-widest text-[#52C480] font-semibold">
+                        <span className="text-[10px] font-body uppercase tracking-widest text-[#52C480] font-semibold">
                           {node.tag || `STAGE ${index + 1}`}
                         </span>
                         {node.badge && (
-                          <span className="text-[9px] font-mono px-1.5 py-0.5 rounded-sm bg-[#122E25] text-[#94A3B8] border border-[#194D3B]">
+                          <span className="text-[9px] font-body px-1.5 py-0.5 rounded-sm bg-[#122E25] text-[#94A3B8] border border-[#194D3B]">
                             {node.badge}
                           </span>
                         )}
                       </div>
 
-                      <h4 className="text-white font-semibold text-sm sm:text-base leading-snug">
+                      <h4 className="text-white font-semibold text-sm sm:text-base leading-snug font-body">
                         {node.title}
                       </h4>
 
-                      <p className="text-[#94A3B8] text-xs leading-relaxed mt-1">
+                      <p className="text-[#94A3B8] text-xs leading-relaxed mt-1 font-body">
                         {node.description}
                       </p>
                     </div>
@@ -156,7 +156,7 @@ export default function WorkflowPipeline({
                   {node.metric && (
                     <div className="text-right flex-shrink-0">
                       <span
-                        className={`inline-block px-2 py-0.5 text-[10px] font-mono rounded-md font-semibold ${
+                        className={`inline-block px-2 py-0.5 text-[10px] font-body rounded-md font-semibold ${
                           isActive
                             ? 'bg-[#52C480]/20 text-[#52C480] border border-[#52C480]/40'
                             : 'bg-[#122E25] text-[#94A3B8] border border-[#194D3B]'
@@ -183,7 +183,7 @@ export default function WorkflowPipeline({
         <button
           type="button"
           onClick={() => setIsPaused(!isPaused)}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#122E25] hover:bg-[#194D3B] text-white border border-[#194D3B] transition-colors font-mono text-[11px]"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#122E25] hover:bg-[#194D3B] text-white border border-[#194D3B] transition-colors font-body text-[11px] font-semibold"
         >
           {isPaused ? '▶ Resume Flow' : '⏸ Pause Flow'}
         </button>

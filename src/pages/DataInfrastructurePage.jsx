@@ -97,14 +97,14 @@ export default function DataInfrastructurePage() {
               <SectionReveal delay={0.2}>
                 <div className="grid grid-cols-2 gap-3 pt-6 border-t border-hairline max-w-lg">
                   <div>
-                    <p className="font-mono text-xs font-bold text-ink flex items-center gap-1.5">
+                    <p className="font-body text-xs font-bold text-ink flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#0E704C]" />
                       Continuous CDC
                     </p>
                     <p className="text-[11px] text-muted mt-0.5">Real-time change capture</p>
                   </div>
                   <div>
-                    <p className="font-mono text-xs font-bold text-ink flex items-center gap-1.5">
+                    <p className="font-body text-xs font-bold text-ink flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#0E704C]" />
                       Zero Data Loss
                     </p>
@@ -121,11 +121,11 @@ export default function DataInfrastructurePage() {
                   
                   {/* Top Bar with Switcher */}
                   <div className="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#A7F3D0] flex items-center gap-2">
+                    <span className="text-xs font-body font-bold uppercase tracking-wider text-[#A7F3D0] flex items-center gap-2">
                       <span className="w-2 h-2 rounded-full bg-[#52C480] animate-pulse" />
                       Infrastructure Architecture
                     </span>
-                    <span className="px-2.5 py-0.5 text-[10px] font-mono bg-white/10 text-white/90 rounded-md border border-white/10">
+                    <span className="px-2.5 py-0.5 text-[10px] font-body font-semibold bg-white/10 text-white/90 rounded-md border border-white/10">
                       {currentView.tag}
                     </span>
                   </div>
@@ -155,7 +155,7 @@ export default function DataInfrastructurePage() {
                     <h4 className="font-display font-bold text-sm text-white mb-1">
                       {currentView.title}
                     </h4>
-                    <p className="text-xs text-white/70 leading-relaxed">
+                    <p className="text-xs text-white/70 leading-relaxed font-body">
                       {currentView.desc}
                     </p>
                   </div>
@@ -167,7 +167,7 @@ export default function DataInfrastructurePage() {
                         key={view.id}
                         type="button"
                         onClick={() => setActiveView(idx)}
-                        className={`py-2 px-2 rounded-lg text-[10px] font-mono font-semibold transition-all duration-200 text-center ${
+                        className={`py-2 px-2 rounded-lg text-[11px] font-body font-semibold tracking-wide transition-all duration-200 text-center ${
                           activeView === idx
                             ? 'bg-[#0E704C] text-white shadow-md border border-[#52C480]/50'
                             : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white border border-white/5'
@@ -194,7 +194,7 @@ export default function DataInfrastructurePage() {
         <div className="max-w-7xl mx-auto">
           <SectionReveal>
             <div className="max-w-2xl mb-14">
-              <span className="text-xs font-mono font-semibold uppercase tracking-widest text-[#0E704C] block mb-2">
+              <span className="text-xs font-body font-semibold uppercase tracking-widest text-[#0E704C] block mb-2">
                 DATA INFRASTRUCTURE SERVICES
               </span>
               <h2 className="font-display font-bold text-3xl sm:text-4xl text-ink leading-tight">

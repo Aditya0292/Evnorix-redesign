@@ -101,7 +101,7 @@ export default function ProductsPage() {
                     
                     {/* Left: Service Info & Capabilities */}
                     <div className="lg:col-span-7">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-semibold uppercase tracking-wider text-[#0E704C] bg-[#E6F7F0] border border-[#A7F3D0] rounded-md mb-4">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-body font-semibold uppercase tracking-wider text-[#0E704C] bg-[#E6F7F0] border border-[#A7F3D0] rounded-md mb-4">
                         {s.badge}
                       </span>
                       
@@ -140,7 +140,7 @@ export default function ProductsPage() {
                     <div className="lg:col-span-5">
                       <div className="rounded-xl bg-[#0A1C16] border border-[#193E30] p-6 text-white shadow-xl">
                         <div className="flex items-center justify-between pb-3 mb-4 border-b border-white/10">
-                          <span className="text-xs font-mono font-bold text-[#A7F3D0]">
+                          <span className="text-xs font-body font-bold text-[#A7F3D0]">
                             Evnorix Delivery Scope
                           </span>
                           <span className="w-2 h-2 rounded-full bg-[#52C480]" />

@@ -247,13 +247,13 @@ export default function CreditMemoPage() {
                           Credit Memo
                         </h3>
                       </div>
-                      <p className="text-muted text-xs font-mono mt-0.5">
+                      <p className="text-muted text-xs font-body font-medium mt-0.5">
                         {activeMemo.borrower} &bull; {activeMemo.facility}
                       </p>
                     </div>
 
                     <div className="flex items-center gap-2">
-                      <span className="px-2.5 py-1 text-[11px] font-bold font-mono text-[#0E704C] bg-[#E6F7F0] border border-[#A7F3D0] rounded-md tracking-wider">
+                      <span className="px-2.5 py-1 text-[11px] font-bold font-body text-[#0E704C] bg-[#E6F7F0] border border-[#A7F3D0] rounded-md tracking-wider">
                         READY
                       </span>
                     </div>
@@ -271,21 +271,21 @@ export default function CreditMemoPage() {
                     >
                       <div>
                         <div className="flex items-center justify-between mb-1">
-                          <span className="text-[10px] font-mono uppercase tracking-widest text-[#0E704C] font-semibold">
+                          <span className="text-[10px] font-body uppercase tracking-widest text-[#0E704C] font-semibold">
                             Borrower Summary
                           </span>
-                          <span className="text-[10px] font-mono text-muted bg-[#FAF9F6] px-2 py-0.5 rounded-md border border-hairline">
+                          <span className="text-[10px] font-body font-semibold text-muted bg-[#FAF9F6] px-2 py-0.5 rounded-md border border-hairline">
                             {activeMemo.riskTier}
                           </span>
                         </div>
-                        <p className="text-ink text-xs leading-relaxed bg-[#FAFDFB] p-3 rounded-md border border-[#A7F3D0]/60">
+                        <p className="text-ink text-xs leading-relaxed bg-[#FAFDFB] p-3 rounded-md border border-[#A7F3D0]/60 font-body">
                           {activeMemo.summary}
                         </p>
                       </div>
 
                       {/* Section 2: Financial Spread & Ratio Matrix */}
                       <div>
-                        <span className="text-[10px] font-mono uppercase tracking-widest text-[#0E704C] font-semibold block mb-2">
+                        <span className="text-[10px] font-body uppercase tracking-widest text-[#0E704C] font-semibold block mb-2">
                           Financial Spread &amp; Trailing Performance
                         </span>
 
@@ -363,11 +363,11 @@ export default function CreditMemoPage() {
 
                       {/* Section 3: Recommendation Narrative */}
                       <div>
-                        <span className="text-[10px] font-mono uppercase tracking-widest text-[#0E704C] font-semibold block mb-1">
+                        <span className="text-[10px] font-body uppercase tracking-widest text-[#0E704C] font-semibold block mb-1">
                           Committee Recommendation
                         </span>
                         <div className="p-3 bg-[#F4FAF7] border border-[#A7F3D0] rounded-md">
-                          <p className="text-ink text-xs leading-relaxed font-medium">
+                          <p className="text-ink text-xs leading-relaxed font-medium font-body">
                             {activeMemo.recommendation}
                           </p>
                         </div>
@@ -376,7 +376,7 @@ export default function CreditMemoPage() {
                   </AnimatePresence>
 
                   {/* Document Footer Controls */}
-                  <div className="relative z-10 pt-3 border-t border-hairline flex items-center justify-between text-xs text-muted">
+                  <div className="relative z-10 pt-3 border-t border-hairline flex items-center justify-between text-xs text-muted font-body">
                     <span className="flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#0E704C]" />
                       Audit-Locked Hash: #8F2B-9A10
@@ -408,7 +408,7 @@ export default function CreditMemoPage() {
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-ink leading-tight mb-4">
                 What's in the memo
               </h2>
-              <p className="text-muted text-base sm:text-lg leading-relaxed">
+              <p className="text-muted text-base sm:text-lg leading-relaxed font-body">
                 Everything a credit committee expects, assembled directly from the underwriting data your team already captured in LOS.
               </p>
             </div>
@@ -429,7 +429,7 @@ export default function CreditMemoPage() {
                         <span className="w-8 h-8 rounded-md bg-[#E6F7F0] text-[#0E704C] flex items-center justify-center shadow-xs">
                           <IconComp className="w-4 h-4 text-[#0E704C]" />
                         </span>
-                        <span className="text-[10px] uppercase tracking-wider font-semibold text-muted px-2 py-0.5 bg-[#FAF9F6] border border-hairline rounded-md">
+                        <span className="text-[10px] uppercase tracking-wider font-semibold text-muted px-2 py-0.5 bg-[#FAF9F6] border border-hairline rounded-md font-body">
                           {feat.tag}
                         </span>
                       </div>
@@ -437,12 +437,12 @@ export default function CreditMemoPage() {
                     <h3 className="font-display font-bold text-lg text-ink leading-snug mb-3 group-hover:text-[#0E704C] transition-colors">
                       {feat.title}
                     </h3>
-                    <p className="text-muted text-sm leading-relaxed">
+                    <p className="text-muted text-sm leading-relaxed font-body">
                       {feat.description}
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-hairline/60 flex items-center text-xs font-semibold text-[#0E704C]">
+                  <div className="mt-6 pt-4 border-t border-hairline/60 flex items-center text-xs font-semibold text-[#0E704C] font-body">
                     <span>Explore capability</span>
                     <span className="ml-1.5 group-hover:translate-x-1 transition-transform">→</span>
                   </div>
@@ -478,7 +478,7 @@ export default function CreditMemoPage() {
               <SectionReveal key={p.title} delay={i * 0.08}>
                 <div className="p-6 rounded-lg bg-[#FAF9F6] border border-hairline hover:border-[#A7F3D0] transition-all duration-200 h-full flex flex-col justify-between">
                   <div>
-                    <span className="text-xs font-mono font-bold text-[#0E704C] mb-3 block">
+                    <span className="text-xs font-body font-bold text-[#0E704C] mb-3 block">
                       {p.num}
                     </span>
                     <h3 className="font-display font-bold text-lg text-ink mb-2 leading-snug">

@@ -271,7 +271,7 @@ export default function Navbar() {
                 {/* Mobile Services Section (Directly Clickable & Always Visible) */}
                 <div className="rounded-xl bg-black/25 p-3 border border-white/10 space-y-2">
                   <div className="flex items-center justify-between px-1 pb-1 border-b border-white/10">
-                    <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#A7F3D0] flex items-center gap-1.5">
+                    <span className="text-[11px] font-body font-bold uppercase tracking-wider text-[#A7F3D0] flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#52C480] animate-pulse" />
                       Services
                     </span>

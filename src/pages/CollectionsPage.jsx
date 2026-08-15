@@ -69,11 +69,11 @@ export default function CollectionsPage() {
               <SectionReveal delay={0.2}>
                 <div className="relative rounded-2xl bg-gradient-to-b from-[#0A1C16] to-[#06140F] border border-[#193E30] p-6 text-white shadow-2xl overflow-hidden">
                   <div className="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#A7F3D0] flex items-center gap-2">
+                    <span className="text-xs font-body font-bold uppercase tracking-wider text-[#A7F3D0] flex items-center gap-2">
                       <span className="w-2 h-2 rounded-full bg-[#52C480] animate-ping" />
                       Recovery Workflow Engine
                     </span>
-                    <span className="px-2 py-0.5 text-[10px] font-mono bg-white/10 rounded text-white/80">
+                    <span className="px-2 py-0.5 text-[10px] font-body font-semibold bg-white/10 rounded text-white/80">
                       Simulated Pipeline
                     </span>
                   </div>
@@ -84,7 +84,7 @@ export default function CollectionsPage() {
                       { account: 'Cascade Logistics #8104', bucket: '31-60 DPD', action: 'Escalation & Restructuring Plan', status: 'In Discussion' },
                       { account: 'Pinnacle Supply #7219', bucket: '61+ DPD', action: 'Field Officer Assignment', status: 'Dispatched' },
                     ].map((item) => (
-                      <div key={item.account} className="p-3 rounded-lg bg-white/5 border border-white/5 flex items-center justify-between text-xs">
+                      <div key={item.account} className="p-3 rounded-lg bg-white/5 border border-white/5 flex items-center justify-between text-xs font-body">
                         <div>
                           <p className="font-semibold text-white">{item.account}</p>
                           <p className="text-[11px] text-white/70">{item.action}</p>
@@ -98,7 +98,7 @@ export default function CollectionsPage() {
                     ))}
                   </div>
 
-                  <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-white/60">
+                  <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-white/60 font-body">
                     <span>Illustrative Recovery Telemetry</span>
                     <span className="text-[#52C480] font-semibold">100% Audit Tracked</span>
                   </div>
@@ -119,7 +119,7 @@ export default function CollectionsPage() {
         <div className="max-w-7xl mx-auto">
           <SectionReveal>
             <div className="max-w-2xl mb-14">
-              <span className="text-xs font-mono font-semibold uppercase tracking-widest text-[#0E704C] block mb-2">
+              <span className="text-xs font-body font-semibold uppercase tracking-widest text-[#0E704C] block mb-2">
                 COLLECTIONS CAPABILITIES
               </span>
               <h2 className="font-display font-bold text-3xl sm:text-4xl text-ink leading-tight">

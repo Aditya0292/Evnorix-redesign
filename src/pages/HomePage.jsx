@@ -52,39 +52,74 @@ const servicesData = {
       ],
     },
   },
-  creditMemo: {
-    id: 'creditMemo',
-    tabLabel: 'Credit Memo',
-    icon: BarChartIcon,
-    badge: 'Automated Reporting',
-    title: 'Credit Memo & Reporting',
-    tagline: 'Turn underwriting data into a committee-ready credit memo automatically.',
+  collections: {
+    id: 'collections',
+    tabLabel: 'Collections',
+    icon: ShieldCheckIcon,
+    badge: 'Operations & Recovery',
+    title: 'Collections Services',
+    tagline: 'Streamline debt recovery, field coordination, and automated payment routing.',
     description:
-      'Eliminate manual drafting and spreadsheet formula risk. Credit Memo ingests verified data straight from LOS files, calculates dynamic financial spreads, and generates committee-ready packages.',
-    to: '/credit-memo',
+      'Improve recovery visibility with automated delinquency escalation trees, agent follow-up queues, field officer coordination, and secure borrower payment links with real-time settlement reconciliation.',
+    to: '/collections',
     metrics: [
-      { label: 'Draft Time Saved', num: 80, suffix: '%', decimals: 0 },
-      { label: 'Spread Precision', num: 100, suffix: '%', decimals: 0 },
+      { label: 'Net Recovery Lift', num: 38, suffix: '%', decimals: 0 },
+      { label: 'PTP Resolution Time', num: 2.5, suffix: 'x Faster', decimals: 1 },
     ],
     features: [
-      'Automated financial spreads & ratio matrices (DSCR, Leverage, LTV)',
-      'Policy-tailored configurable committee memo templates',
-      'Executive recommendation generation & approval routing',
-      'One-click institutional PDF & Word export with audit trail',
+      'Configurable delinquency bucket workflows & triggers',
+      'Centralized agent task queues & promise-to-pay tracking',
+      'Field activity verification & mobile receipt logging',
+      'Instant self-service borrower payment links',
     ],
     mockUi: {
-      headerTitle: 'Committee Memo Generator',
-      stat1Label: 'Memos Generated This Week',
-      stat1Val: 64,
-      stat1Prefix: '',
-      stat1Suffix: ' Memos',
-      stat1Badge: '100% Ready',
-      chartBars: [55, 70, 85, 90, 95, 88, 100],
+      headerTitle: 'Active Collections Operations',
+      stat1Label: 'Recovered Balance This Month',
+      stat1Val: 892400,
+      stat1Prefix: '$',
+      stat1Badge: '+28.4%',
+      chartBars: [50, 65, 80, 75, 90, 85, 98],
       days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
       recentItems: [
-        { name: 'Apex Logistics $2.45M Note', amount: 'DSCR 1.58x', status: 'Board Ready', time: '5m ago' },
-        { name: 'Meridian Health $4.8M Line', amount: 'DSCR 1.92x', status: 'Approved', time: '18m ago' },
-        { name: 'Highland Ridge Term Note', amount: 'DSCR 1.65x', status: 'In Review', time: '40m ago' },
+        { name: 'Horizon Logistics Facility', amount: '$42,500', status: 'Payment Settled', time: '4m ago' },
+        { name: 'Vanguard Transport Note', amount: '$18,200', status: 'PTP Promised', time: '12m ago' },
+        { name: 'Cascadia Retail Lease', amount: '$64,000', status: 'Field Escalated', time: '28m ago' },
+      ],
+    },
+  },
+  dataInfrastructure: {
+    id: 'dataInfrastructure',
+    tabLabel: 'Data Infrastructure',
+    icon: BarChartIcon,
+    badge: 'Data Mirroring & Sync',
+    title: 'Database Repositories & Data Mirroring',
+    tagline: 'High-availability data infrastructure with sub-second replication & zero data loss.',
+    description:
+      'High-availability data infrastructure with sub-second change-data-capture (CDC) replication, controlled multi-node synchronization, hot-standby disaster recovery vaults, and immutable audit logs.',
+    to: '/data-infrastructure',
+    metrics: [
+      { label: 'Sync Latency', num: 0.08, suffix: 's', decimals: 2 },
+      { label: 'Uptime SLA Guarantee', num: 99.99, suffix: '%', decimals: 2 },
+    ],
+    features: [
+      'Sub-second change-data-capture (CDC) replication',
+      'Deterministic multi-node synchronization algorithms',
+      'Hot-standby disaster recovery & automated failover',
+      'End-to-end TLS 1.3 & AES-256 financial compliance encryption',
+    ],
+    mockUi: {
+      headerTitle: 'Live Data Replication & Sync Engine',
+      stat1Label: 'Synced Operational Records / Sec',
+      stat1Val: 14250,
+      stat1Prefix: '',
+      stat1Suffix: ' rec/s',
+      stat1Badge: '0.08s Latency',
+      chartBars: [85, 92, 88, 96, 94, 98, 100],
+      days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      recentItems: [
+        { name: 'Core Ledger CDC Sync', amount: '12,400 ops/s', status: 'In Sync', time: 'Realtime' },
+        { name: 'Disaster Recovery Vault', amount: 'Multi-Region', status: 'Active Mirror', time: 'Realtime' },
+        { name: 'Audit Log Vault Stream', amount: 'AES-256', status: 'Encrypted', time: 'Realtime' },
       ],
     },
   },
@@ -620,10 +655,15 @@ export default function HomePage() {
 
                 {/* Right Column: Service Description & Capabilities */}
                 <div className="lg:col-span-5">
-                  <div className="flex items-center gap-2 text-sm font-bold text-[#0E704C] mb-3">
-                    <span className="text-lg">{currentService.icon}</span>
-                    <span>{currentService.tabLabel}</span>
-                  </div>
+                  {(() => {
+                    const ServiceIcon = currentService.icon;
+                    return (
+                      <div className="flex items-center gap-2 text-sm font-bold text-[#0E704C] mb-3">
+                        <ServiceIcon className="w-4 h-4 text-[#0E704C]" />
+                        <span>{currentService.tabLabel}</span>
+                      </div>
+                    );
+                  })()}
 
                   <h3 className="font-display font-bold text-3xl text-ink leading-tight mb-4">
                     {currentService.title}

@@ -19,7 +19,7 @@ import {
 const servicesData = {
   los: {
     id: 'los',
-    tabLabel: 'LOS Platform',
+    tabLabel: 'LOS Implementation',
     icon: SparklesIcon,
     badge: 'Core Origination',
     title: 'Loan Origination System (LOS)',
@@ -54,7 +54,7 @@ const servicesData = {
   },
   collections: {
     id: 'collections',
-    tabLabel: 'Collections',
+    tabLabel: 'Collections Workflows',
     icon: ShieldCheckIcon,
     badge: 'Operations & Recovery',
     title: 'Collections Services',
@@ -125,58 +125,51 @@ const servicesData = {
   },
 };
 
-const testimonials = [
+const engagementPatterns = [
   {
-    name: 'Sarah Thompson',
-    role: 'Head of Lending Operations',
-    company: 'Pacific Credit Union',
-    image: '/assets/testimonials/sarah.jpg',
-    badge: 'LOS Origination Engine',
-    metric: '45-Min Underwriting',
-    impactLabel: 'Underwriting Cycle Time',
-    statVal: '-65% Time to Close',
-    pillar: 'Automated KYC & Decision Rules',
-    story:
-      'Evnorix transformed our entire lending workflow. We cut our commercial underwriting cycle from 3 business days down to 45 minutes without compromising risk policy or compliance.',
+    id: 'pattern-1',
+    category: 'LOS Workflow Engineering',
+    title: 'Commercial Lending & Application Intake',
+    scope: 'End-to-End Origination Portal & Automated Rules',
+    benchmark: 'Simulated 45-Min Underwriting Target',
+    badge: 'Core Workflow Integration',
+    summary:
+      'Engineered a digital intake portal and decisioning pipeline that ingests commercial borrower files, executes instant identity verification, and auto-routes completed credit applications directly into core disbursal systems.',
+    pillars: [
+      'Self-Service Application Intake Portal',
+      'Configurable Risk-Scoring & KYC Rules',
+      'Direct Core Disbursal Webhook Integration',
+    ],
   },
   {
-    name: 'James Williams',
-    role: 'Chief Technology Officer',
-    company: 'Meridian Capital Partners',
-    image: '/assets/testimonials/james.jpg',
-    badge: 'Real-Time Data Mirroring',
-    metric: '0.08s Sync Latency',
-    impactLabel: 'Core Ledger Replication',
-    statVal: '99.99% Zero Downtime',
-    pillar: 'TLS 1.3 In-Flight Encryption',
-    story:
-      'The real-time data replication provides absolute visibility across all our core ledgers and analytical stores with zero downtime, instant failover, and verified encryption.',
+    id: 'pattern-2',
+    category: 'Collections & Portfolio Recovery',
+    title: 'Automated Recovery Queues & Field Settlement',
+    scope: 'Delinquency Escalation & Field Officer Tracking',
+    benchmark: '38% Net Recovery Lift Benchmark',
+    badge: 'Operations & Field Automation',
+    summary:
+      'Deployed an automated debt recovery workflow featuring dynamic delinquency bucket routing, agent follow-up task queues, and secure self-service borrower payment links with instant ledger reconciliation.',
+    pillars: [
+      'Automated Delinquency Bucket Triggers',
+      'Centralized Agent Task & PTP Queues',
+      'Instant Self-Service Borrower Payment Links',
+    ],
   },
   {
-    name: 'Emily Chen',
-    role: 'Director of Portfolio Risk',
-    company: 'Summit Vantage Bank',
-    image: '/assets/testimonials/emily.jpg',
-    badge: 'Portfolio Risk & Recovery',
-    metric: '$1.8M Recovered Q1',
-    impactLabel: 'Delinquency Resolution',
-    statVal: '+38% Net Recovery Lift',
-    pillar: 'Predictive Delinquency Tiers',
-    story:
-      'Automating our borrower communication and settlement workflows recovered over $1.8M in overdue balances in Q1 alone, while improving borrower retention satisfaction scores.',
-  },
-  {
-    name: 'Marcus Vance',
-    role: 'Managing Director',
-    company: 'Apex Commercial Lending',
-    image: '/assets/testimonials/marcus.jpg',
-    badge: 'Credit Memo & Committee',
-    metric: '80% Drafting Saved',
-    impactLabel: 'Financial Spreads & PDF Packets',
-    statVal: '100% Audit Ready',
-    pillar: 'Direct LOS Ingestion Pipeline',
-    story:
-      'Credit Memo generates institutional-grade committee packages straight from live underwriting files. Our analysts no longer waste hours copy-pasting spreadsheet formulas.',
+    id: 'pattern-3',
+    category: 'Data Infrastructure Services',
+    title: 'Multi-Node CDC Data Mirroring',
+    scope: 'Sub-Second Ledger Replication & Vault Backup',
+    benchmark: '0.08s Sync Latency Architecture',
+    badge: 'Infrastructure & Replication',
+    summary:
+      'Designed and integrated a high-throughput Change-Data-Capture (CDC) replication infrastructure across multi-node banking ledgers with zero downtime failover and TLS 1.3 encrypted audit logging.',
+    pillars: [
+      'Sub-Second CDC Change-Data Capture',
+      'Deterministic Multi-Node Sync Algorithms',
+      'Hot-Standby Disaster Recovery Vaults',
+    ],
   },
 ];
 
@@ -537,11 +530,11 @@ export default function HomePage() {
               <div>
                 <SectionReveal variant="badge">
                   <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-body font-semibold uppercase tracking-widest text-[#0E704C] bg-[#E6F7F0] border border-[#A7F3D0] rounded-md mb-4 shadow-xs">
-                    Core Products
+                    Service Delivery Scope
                   </span>
                 </SectionReveal>
                 <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-ink leading-tight">
-                  Experience the Evnorix Software Suite
+                  Inside an Evnorix Delivery Engagement
                 </h2>
               </div>
 
@@ -722,10 +715,10 @@ export default function HomePage() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
-          4. PARTNERED WITH LEADERS (Inspired by Reference Visual Concept)
+          4. REPRESENTATIVE ENGAGEMENT PATTERNS (Brief Section 8 Compliance)
          ───────────────────────────────────────────────────────────── */}
       <section className="py-24 lg:py-32 px-6 lg:px-8 bg-[#040D09] text-white relative overflow-hidden">
-        {/* Concentric Ambient Geometric Orbit Rings (Matching reference) */}
+        {/* Concentric Ambient Geometric Orbit Rings */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[720px] rounded-full border border-white/[0.04] pointer-events-none" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[980px] h-[980px] rounded-full border border-white/[0.03] pointer-events-none" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1240px] h-[1240px] rounded-full border border-white/[0.02] pointer-events-none" />
@@ -734,209 +727,63 @@ export default function HomePage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[34rem] h-[34rem] rounded-full bg-radial from-[#0E704C]/25 via-[#0A1C16]/20 to-transparent blur-3xl pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto z-10">
-          {/* Main Centered Reference Header */}
+          {/* Header */}
           <SectionReveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="inline-flex items-center gap-2 px-3.5 py-1 text-xs font-body font-semibold uppercase tracking-widest text-[#52C480] bg-[#0E2E20] border border-[#164D36] rounded-md mb-4 shadow-sm">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#52C480] animate-pulse" />
-                Trusted By Financial Leaders
+                Delivery Framework
               </span>
               
-              <h2 className="font-display font-medium text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.15]">
-                Partnered with leaders across{' '}
+              <h2 className="font-display font-medium text-3xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.15] mb-4">
+                Representative{' '}
                 <span className="font-serif italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-[#A7F3D0] via-[#52C480] to-[#22C55E]">
-                  modern lending institutions
+                  engagement patterns
                 </span>
               </h2>
+              <p className="text-white/70 text-xs sm:text-sm max-w-xl mx-auto font-body">
+                *Selected work &amp; client case studies pending formal clearance. Illustrative engagement models built for institutional lending teams.
+              </p>
             </div>
           </SectionReveal>
 
-          {/* Cards Carousel Container with Side Navigation Arrows (Spaced comfortably) */}
-          <div className="relative px-2 sm:px-12 lg:px-14">
-            {/* Left / Right Arrow Floating Controls (Spaced with generous distance) */}
-            <button
-              type="button"
-              onClick={() => setActiveLeaderIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
-              aria-label="Previous Leader"
-              className="absolute -left-2 sm:-left-4 lg:-left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-[#0A1C16]/90 border border-white/15 backdrop-blur-md text-white/80 hover:text-white hover:border-[#52C480] flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-105"
-            >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
+          {/* 3 Structural Engagement Archetype Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            {engagementPatterns.map((pattern, idx) => (
+              <SectionReveal key={pattern.id} delay={idx * 0.1}>
+                <div className="bg-[#0A1C16] border border-[#193E30] hover:border-[#52C480]/60 rounded-2xl p-7 text-white shadow-xl hover:shadow-[0_0_30px_rgba(82,196,128,0.15)] transition-all duration-300 flex flex-col justify-between h-full group">
+                  <div>
+                    <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#193E30]">
+                      <span className="text-xs font-body font-bold text-[#52C480]">
+                        {pattern.badge}
+                      </span>
+                      <span className="px-2 py-0.5 text-[10px] font-semibold text-[#A7F3D0] bg-[#12382B] rounded border border-[#194D3B]">
+                        {pattern.benchmark}
+                      </span>
+                    </div>
 
-            <button
-              type="button"
-              onClick={() => setActiveLeaderIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1))}
-              aria-label="Next Leader"
-              className="absolute -right-2 sm:-right-4 lg:-right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-[#0A1C16]/90 border border-white/15 backdrop-blur-md text-white/80 hover:text-white hover:border-[#52C480] flex items-center justify-center shadow-lg transition-all duration-200 hover:scale-105"
-            >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+                    <h3 className="font-display font-bold text-xl text-white mb-2 group-hover:text-[#A7F3D0] transition-colors">
+                      {pattern.title}
+                    </h3>
+                    <p className="text-xs text-white/60 mb-4 font-body">
+                      Scope: {pattern.scope}
+                    </p>
+                    <p className="text-xs text-white/80 leading-relaxed font-body mb-6">
+                      {pattern.summary}
+                    </p>
+                  </div>
 
-            {/* 4 Portrait Cards Grid (Exact matching concept to reference image) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {testimonials.map((t, idx) => {
-                const isHovered = hoveredLeaderIndex === idx;
-                const isSelected = activeLeaderIndex === idx;
-                const showBlueprint = isHovered || isSelected;
-
-                return (
-                  <SectionReveal key={t.name} delay={idx * 0.08}>
-                    <motion.div
-                      onMouseEnter={() => handleCardHover(idx)}
-                      onMouseLeave={() => handleCardLeave()}
-                      onClick={() => setActiveLeaderIndex(prev => prev === idx ? null : idx)}
-                      whileHover={{ y: -6 }}
-                      transition={{ duration: 0.25 }}
-                      className={`relative rounded-2xl overflow-hidden cursor-pointer h-[440px] transition-all duration-300 touch-manipulation ${
-                        showBlueprint
-                          ? 'border-2 border-[#52C480] shadow-[0_0_35px_rgba(82,196,128,0.25)] ring-1 ring-[#52C480]/40'
-                          : 'border border-white/10 hover:border-white/20'
-                      }`}
-                    >
-                      <AnimatePresence mode="wait">
-                        {showBlueprint ? (
-                          /* ─────────────────────────────────────────────────────────────
-                             BACK / ACTIVE STATE: VIBRANT PRIMARY GREEN BLUEPRINT CARD
-                             ───────────────────────────────────────────────────────────── */
-                          <motion.div
-                            key="blueprint"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.22 }}
-                            className="absolute inset-0 bg-gradient-to-b from-[#0E704C] via-[#0B5A3C] to-[#073D29] p-6 flex flex-col justify-between shadow-2xl"
-                          >
-                            {/* Blueprint Coordinate Grid Overlay */}
-                            <div
-                              className="absolute inset-0 opacity-25 pointer-events-none"
-                              style={{
-                                backgroundImage: `
-                                  linear-gradient(to right, rgba(167, 243, 208, 0.35) 1px, transparent 1px),
-                                  linear-gradient(to bottom, rgba(167, 243, 208, 0.35) 1px, transparent 1px)
-                                `,
-                                backgroundSize: '24px 24px',
-                              }}
-                            />
-
-                            {/* Top: Name & Role */}
-                            <div className="relative z-10">
-                              <h3 className="font-display font-bold text-xl text-white leading-tight drop-shadow-sm">
-                                {t.name}
-                              </h3>
-                              <p className="text-[11px] text-[#A7F3D0] font-body font-semibold mt-0.5">
-                                {t.role}
-                              </p>
-                              <p className="text-[11px] text-emerald-100/75 font-body mt-0.5">
-                                {t.company}
-                              </p>
-                            </div>
-
-                            {/* Middle: Structured Operational Impact & Verification Box in Rich Primary Green */}
-                            <div className="relative z-10 bg-[#06422C]/90 border border-[#A7F3D0]/40 rounded-xl p-3.5 shadow-md backdrop-blur-sm">
-                              <div className="flex items-center justify-between pb-2 mb-2 border-b border-[#166B4A]">
-                                <span className="text-[10px] font-body font-semibold uppercase tracking-wider text-[#A7F3D0]">
-                                  {t.badge}
-                                </span>
-                                <span className="px-2 py-0.5 text-[10px] font-body font-bold text-[#0E704C] bg-white rounded shadow-xs">
-                                  {t.metric}
-                                </span>
-                              </div>
-
-                              <div className="flex items-center justify-between text-xs mb-1.5">
-                                <span className="text-emerald-100/85 text-[10px] font-body font-medium">{t.impactLabel}</span>
-                                <span className="text-white font-body font-bold text-xs tracking-tight">{t.statVal}</span>
-                              </div>
-
-                              <div className="flex items-center gap-1.5 text-[10px] text-[#A7F3D0] pt-0.5">
-                                <CheckIcon className="w-3 h-3 text-[#52C480] flex-shrink-0" />
-                                <span className="font-body font-medium leading-snug">{t.pillar}</span>
-                              </div>
-                            </div>
-
-                            {/* Bottom: Full Narrative Story & Mobile Close Hint */}
-                            <div className="relative z-10 pt-2.5 border-t border-[#166B4A]">
-                              <p className="text-[11px] text-white/90 leading-relaxed font-body font-normal">
-                                "{t.story}"
-                              </p>
-                              <div className="mt-2 flex items-center justify-between text-[10px] text-[#A7F3D0]/85 font-medium md:hidden">
-                                <span>Tap to view portrait</span>
-                                <span>↺</span>
-                              </div>
-                            </div>
-                          </motion.div>
-                        ) : (
-                          /* ─────────────────────────────────────────────────────────────
-                             FRONT STATE: CLEAN FULL PORTRAIT CARD
-                             ───────────────────────────────────────────────────────────── */
-                          <motion.div
-                            key="portrait"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.22 }}
-                            className="absolute inset-0 bg-[#050E0A] flex flex-col justify-end p-5"
-                          >
-                            {/* Clean Portrait Image */}
-                            <img
-                              src={t.image}
-                              alt={t.name}
-                              className="absolute inset-0 w-full h-full object-cover object-top"
-                            />
-
-                            {/* Soft Gradient Fade on bottom for text readability */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#040D09] via-[#040D09]/30 to-transparent" />
-                            <div className="absolute inset-0 bg-gradient-to-b from-[#040D09]/20 via-transparent to-transparent" />
-
-                            {/* Bottom: Name & Role Title + Mobile Tap Indicator */}
-                            <div className="relative z-10">
-                              <h3 className="font-display font-bold text-xl text-white leading-snug">
-                                {t.name}
-                              </h3>
-                              <p className="text-xs text-white/70 font-medium mt-0.5">
-                                {t.role}
-                              </p>
-                              <p className="text-[11px] text-[#52C480] font-body font-medium mt-0.5">
-                                {t.company}
-                              </p>
-
-                              {/* Mobile Tap to View Blueprint Indicator */}
-                              <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[10px] font-semibold text-[#A7F3D0] md:hidden">
-                                <span>Tap to view blueprint</span>
-                                <span>→</span>
-                              </div>
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </motion.div>
-                  </SectionReveal>
-                );
-              })}
-            </div>
-
-            {/* Bottom Carousel Indicator Bar (Matching reference) */}
-            <div className="mt-10 max-w-xs mx-auto flex items-center gap-2">
-              {testimonials.map((_, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  onClick={() => setActiveLeaderIndex(idx)}
-                  className="flex-1 h-1 rounded-full transition-all duration-300 overflow-hidden"
-                >
-                  <div
-                    className={`h-full rounded-full transition-all duration-300 ${
-                      activeLeaderIndex === idx
-                        ? 'bg-gradient-to-r from-[#52C480] to-[#22C55E] shadow-[0_0_8px_#52C480]'
-                        : 'bg-white/15 hover:bg-white/30'
-                    }`}
-                  />
-                </button>
-              ))}
-            </div>
+                  <div className="pt-4 border-t border-[#193E30] space-y-2">
+                    {pattern.pillars.map((p) => (
+                      <div key={p} className="flex items-center gap-2 text-xs text-emerald-100/90 font-medium">
+                        <CheckIcon className="w-3.5 h-3.5 text-[#52C480] flex-shrink-0" />
+                        <span>{p}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </SectionReveal>
+            ))}
           </div>
         </div>
       </section>

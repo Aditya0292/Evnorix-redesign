@@ -121,18 +121,20 @@ export default function AboutPage() {
                     </a>
                   </div>
 
-                  {/* 2 Global Hubs Content */}
+                  {/* Global Delivery Architecture */}
                   <div>
-                    <p className="font-display font-black text-4xl text-ink leading-none mb-2">2</p>
-                    <h3 className="font-bold text-sm text-ink mb-1">Global Engineering Hubs</h3>
+                    <span className="inline-block px-2 py-0.5 text-[10px] font-bold text-[#0E704C] bg-[#E6F7F0] rounded mb-2 border border-[#A7F3D0]">
+                      Global Architecture
+                    </span>
+                    <h3 className="font-bold text-sm text-ink mb-1">Deployment Centers</h3>
                     <p className="text-muted text-xs leading-relaxed">
-                      Deployment and solution architecture centers in New York and London.
+                      Solution architecture and technical integration coordination in New York and London.
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* ── COLUMN 2: Tall Lime/Emerald 50+ Team Members Card ── */}
+              {/* ── COLUMN 2: Tall Lime/Emerald Dedicated Squads Card ── */}
               <div className="flex flex-col h-full">
                 <motion.div
                   whileHover={{ y: -4 }}
@@ -152,35 +154,38 @@ export default function AboutPage() {
                   />
 
                   <div className="relative z-10">
-                    <p className="font-display font-black text-6xl lg:text-7xl tracking-tight text-[#143805]">
-                      50+
+                    <span className="inline-block px-2.5 py-1 text-xs font-bold text-[#143805] bg-white/40 backdrop-blur-md rounded-md mb-4 border border-[#143805]/20">
+                      Cross-Functional Delivery
+                    </span>
+                    <p className="font-display font-black text-4xl lg:text-5xl tracking-tight text-[#143805]">
+                      Dedicated Squads
                     </p>
                   </div>
 
                   <div className="relative z-10">
                     <h3 className="font-display font-bold text-xl text-[#143805] mb-2">
-                      Team Members
+                      Engineering Units
                     </h3>
                     <p className="text-[#204E08] text-xs leading-relaxed font-medium">
-                      Meet our dedicated team of 50+ lending operations engineers, quantitative analysts, and fintech architects driving innovation at Evnorix.
+                      Specialized teams of lending operations engineers, quantitative analysts, and fintech architects assigned directly to custom client engagements.
                     </p>
                   </div>
                 </motion.div>
               </div>
 
-              {/* ── COLUMN 3: Solid Dark 100% Dedication Card + Team Collaboration Photo ── */}
+              {/* ── COLUMN 3: Solid Dark Engagement Commitments Card + Team Photo ── */}
               <div className="flex flex-col gap-5 h-full">
-                {/* 100% Dedication Dark Card */}
+                {/* Operational Focus Dark Card */}
                 <motion.div
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.25 }}
                   className="p-7 rounded-2xl bg-gradient-to-b from-[#0A1C16] via-[#0D2A1F] to-[#12382B] text-white shadow-xl border border-[#193E30] flex flex-col justify-between flex-1 min-h-[255px]"
                 >
-                  <p className="font-display font-black text-4xl text-white">100%</p>
+                  <p className="font-display font-bold text-2xl text-[#52C480]">Engineering Integrity</p>
                   <div>
-                    <h3 className="font-bold text-sm text-[#52C480] mb-1.5">Operational Dedication</h3>
+                    <h3 className="font-bold text-sm text-white mb-1.5">Operational Focus</h3>
                     <p className="text-[#94A3B8] text-xs leading-relaxed">
-                      We are committed to providing lending institutions with 99.99% operational uptime and zero data loss.
+                      Committed to providing institutional lending teams with high system availability, robust integration pipelines, and total data protection.
                     </p>
                   </div>
                 </motion.div>
